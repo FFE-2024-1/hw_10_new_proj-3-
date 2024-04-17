@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('../font/GraphikLCG-Regular.eot');
+    src: local('Graphik LCG Regular'), local('GraphikLCG-Regular'),
+        url('../font/GraphikLCG-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/GraphikLCG-Regular.woff2') format('woff2'),
+        url('../font/GraphikLCG-Regular.woff') format('woff'),
+        url('../font/GraphikLCG-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('../font/GraphikLCG-Bold.eot');
+    src: local('Graphik LCG Bold'), local('GraphikLCG-Bold'),
+        url('../font/GraphikLCG-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/GraphikLCG-Bold.woff2') format('woff2'),
+        url('../font/GraphikLCG-Bold.woff') format('woff'),
+        url('../font/GraphikLCG-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('../font/GraphikLCG-Medium.eot');
+    src: local('Graphik LCG Medium'), local('GraphikLCG-Medium'),
+        url('../font/GraphikLCG-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/GraphikLCG-Medium.woff2') format('woff2'),
+        url('../font/GraphikLCG-Medium.woff') format('woff'),
+        url('../font/GraphikLCG-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+html, body {
+    font-family: 'Graphik LCG', Helvetica, sans-serif;
+    font-size: 14px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 350px 1fr 350px;
+    grid-template-areas:
+    "header header header"
+    "slider slider slider"
+    "main main main";
+}
+.header {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-area: header;
+    height: 100px;
+    max-width: 1920px;
+    padding: 2px 47px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo .company {
+    margin-left: 13px;
+    margin-top: 5px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.menu {
+    justify-self: right;
+    align-self: center;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 80px;
+    margin-right: 50px;
+    font-weight: 700;
+}
+
+/* =================== HEADER SLIDER =================== */
+.wrapper {
+    width: 1115px;
+    margin: 0 auto;
+}
+.slider {
+    grid-area: slider;
+    background: no-repeat url(../images/bg-header.jpeg) -11px -104px;
+    height: 980px;
+}
+.slider_block {
+    display: grid;
+    grid-template-columns: 485px 430px;;
+    margin-top: 255px;
+    column-gap: 75px;
+    row-gap: 70px;
+}
+.slider_block h2 {
+    font-size: 52px;
+    margin: 0;
+    line-height: 72px;
+}
+.slider_info {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 17px;
+}
+.slider_nav {
+    margin-top: 10px;
+}
+.slider_nav ul {
+    display: flex;
+    margin-top: 16px;
+    column-gap: 36px;
+}
+.slider_nav li {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #333333;
+    border-radius: 50%;
+}
+.slider_nav li.active {
+    background-color: #619ef4;
+    border: 1px solid #619ef4;
+    border-radius: 50%;
+}
+.navigate_button {
+    box-sizing: border-box;
+    padding-left: 27px;
+    line-height: 54px;
+    font-size: 13px;
+    background-color: #619ef4;
+    border-radius: 3px;
+    width: 240px;
+    height: 54px;
+    color: #fff;
+}
+
+/* =================== WHO =================== */
+main {
+    grid-area: main;
+}
+.who_block .wrapper{
+    padding: 58px 0;
+}
+.who_block .block {
+    width: 805px;
+}
+.who_block h2 {
+    font-size: 45px;
+    
+}
+.who_info {
+    font-size: 18px;
+    margin-top: -13px;
+    line-height: 29px;
+}
+.who_block .statistic {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 87px;
+}
+.who_block .statistic_section {
+    display: grid;
+    grid-template-columns: 130px 170px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    column-gap: 23px;
+}
+.who_block .statistic_section .value {
+    margin: 0 auto;
+    font-size: 36px;
+    font-weight: 500;
+}
+.who_block .statistic_section .value_info {
+    font-size: 18px;
+    font-weight: 500;
+}
+.who_block .navigate_button {
+    margin-top: 100px;
+    color: #619ef4;
+    background-color: #fff;
+    border: 1px solid #619ef4;
+}
