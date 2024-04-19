@@ -52,7 +52,8 @@ h2 {
     grid-template-areas:
     "header header header"
     "slider slider slider"
-    "main main main";
+    "main main main"
+    "footer footer footer";
 }
 .header {
     display: grid;
@@ -267,10 +268,13 @@ main {
 .projects_block {
     box-sizing: border-box;
     padding-top: 66px;
+    padding-bottom: 87px;
 }
 
 .project_elem {
     position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     width: 330px;
     height: 502px;
 }
@@ -283,14 +287,138 @@ main {
 .project_elem:nth-child(3) {
     background: no-repeat url("../images/Project_3.jpg");
 }
-/* .project_logo {
+.project_elem:nth-child(1) .project_logo {
     position: absolute;
-    top: 50px;
-    left: 100px;
-} */
+    top: 191px;
+    left: 99px;
+}
+.project_elem:nth-child(2) .project_logo {
+    position: absolute;
+    top: 173px;
+    left: 113px;
+}
+.project_elem:nth-child(3) .project_logo {
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 82px;
+    height: 82px;
+    top: 184px;
+    left: 122px;
+}
 .projects_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 62px;
+    color: #fff;
+}
+.projects_wrapper .project_title {
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 101px;
+}
+.projects_wrapper .project_info {
+    display: flex;
+    font-size: 18px;
+    line-height: 22px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 119px;
+}
+.all_cases {
+    margin-top: 50px;
+}
 
+
+.partners_block {
+    padding-top: 56px;
+    margin-left: -9px;
+    color: #fff;
+    background: no-repeat url("../images/rectangle.jpeg");
+    width: 1920px;
+    height: 509px;
+}
+.partners_block .clients ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    row-gap: 39px;
+    margin-top: 64px;
+    margin-left: 4px;
+}
+.partners_block .client_items:nth-child(2) {
+    margin-top: 6px;
+    margin-left: 6px;
+}
+.partners_block .client_items:nth-child(3) {
+    margin-left: 38px;
+}
+.partners_block .client_items:nth-child(4) {
+    margin-top: -6px;
+    margin-left: 84px;
+}
+.partners_block .client_items:nth-child(6) {
+    margin-top: -4px;
+    margin-left: -1px;
+}
+.partners_block .client_items:nth-child(7) {
+    margin-top: 13px;
+    margin-left: 55px;
+}
+.partners_block .client_items:nth-child(8) {
+    margin-top: -9px;
+    margin-left: 52px;
+}
+
+.technology_block {
+    margin-top: -7px;
+    margin-bottom: 104px;
+}
+.technology_block .technology_info {
+    font-size: 18px;
+    margin-top: -20px;
+    line-height: 28px;
+}
+.technology_list ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    column-gap: 22px;
+    row-gap: 24px;
+    margin-top: 60px;
+}
+.technology_list .item {
+    display: grid;
+    grid-template-rows: 91px 32px 50px;
+    width: 201px;
+    height: 201px;
+    text-align: center;
+}
+.technology_list .item img {
+    margin: 20px auto 0;
+}
+.technology_list .technology_name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.technology_list .technology_description {
+    margin: 0 auto;
+    line-height: 24px;
+    width: 153px;
+}
+
+footer {
+    grid-area: footer;
+}
+footer .contacts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+footer .contact_button {
+    width: 300px;
+    height: 80px;
 }
