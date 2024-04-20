@@ -391,7 +391,7 @@ main {
 }
 .technology_list .item {
     display: grid;
-    grid-template-rows: 91px 32px 50px;
+    grid-template-rows: 90px 34px 55px;
     width: 201px;
     height: 201px;
     text-align: center;
@@ -411,14 +411,69 @@ main {
 }
 
 footer {
+    box-sizing: border-box;
+    padding-top: 66px;
     grid-area: footer;
+    height: 387px;
+    background-color: black;
+    color: #fff;
 }
 footer .contacts {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 293px 204px 198px 1fr;
     justify-content: center;
+    font-size: 14px;
+    column-gap: 60px;
 }
 footer .contact_button {
-    width: 300px;
-    height: 80px;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding-left: 28px;
+    align-items: center;
+    width: 239px;
+    height: 54px;
+    background-color: #619ef4;
+}
+
+footer .contact_info {
+    margin-top: 24px;
+    line-height: 22px;
+}
+footer .contact_recvezite {
+    padding-left: 38px;
+    line-height: 22px;
+    
+}
+footer .telegram {
+    background: no-repeat 3px 4px url(../images/telegram.png);
+    line-height: 20px;
+}
+footer .phone {
+    background: no-repeat 6px 0px url(../images/phone.png);
+    margin-top: 20px;
+}
+footer .email {
+    background: no-repeat 6px 0px url(../images/email.png);
+    margin-top: 20px;
+}
+
+footer .address {
+    /* padding-left: 16px; */
+}
+footer .city {
+    font-size: 18px;
+    padding-left: 25px;
+    background: no-repeat 7px 5px url(../images/placeholder.svg);
+}
+footer .street {
+    font-size: 14px;
+    padding-left: 24px;
+    padding-top: 8px;
+    line-height: 22px;
+}
+footer .address .phone {
+    background-image: none;
+    margin-top: 16px;
+    margin-left: 24px;
 }
