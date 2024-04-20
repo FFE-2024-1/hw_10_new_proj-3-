@@ -167,28 +167,35 @@ main {
 }
 .who_block .statistic {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 87px;
+    grid-template-columns: 410px 350px 1fr;
+    column-gap: 30px;
 }
 .who_block .statistic_section {
     display: grid;
-    grid-template-columns: 130px 170px;
-    justify-content: center;
+    grid-template-columns: 125px 184px;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 48px;
+    margin-left: 3px;
     column-gap: 23px;
 }
 .who_block .statistic_section .value {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 36px;
     font-weight: 500;
+    width: 128px;
+    background: no-repeat 50% 50% url(../images/big_circle.png);
+    height: 128px;
 }
 .who_block .statistic_section .value_info {
     font-size: 18px;
     font-weight: 500;
+    line-height: 26px;
+    margin-top: -5px;
 }
 .who_block .detail_button {
-    margin-top: 100px;
+    margin-top: 56px;
     color: #619ef4;
     background-color: #fff;
     border: 1px solid #619ef4;
