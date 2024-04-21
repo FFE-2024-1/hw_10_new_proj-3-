@@ -57,7 +57,7 @@ h2 {
 }
 .header {
     display: grid;
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 224px 1fr;
     grid-area: header;
     height: 100px;
     max-width: 1920px;
@@ -76,6 +76,7 @@ h2 {
     letter-spacing: 2px;
 }
 .menu {
+    display: flex;
     justify-self: right;
     align-self: center;
 }
@@ -86,10 +87,13 @@ h2 {
     margin-right: 50px;
     font-weight: 700;
 }
+.menu .burger_menu {
+    display: none;
+}
 
 /* =================== HEADER SLIDER =================== */
 .wrapper {
-    width: 1115px;
+    max-width: 1115px;
     margin: 0 auto;
 }
 .slider {
@@ -158,7 +162,7 @@ main {
     padding-bottom: 106px;
 }
 .who_block .block {
-    width: 805px;
+    max-width: 805px;
 }
 .who_block h2 {
     font-size: 45px;
@@ -172,7 +176,7 @@ main {
 .who_block .statistic {
     display: grid;
     grid-template-columns: 410px 350px 1fr;
-    column-gap: 30px;
+    column-gap: 29px;
 }
 .who_block .statistic_section {
     display: grid;
@@ -349,19 +353,18 @@ main {
 
 .partners_block {
     padding-top: 56px;
+    padding-bottom: 90px;
     margin-left: -9px;
     color: #fff;
     background: no-repeat url("../images/rectangle.jpeg");
-    width: 1920px;
-    height: 509px;
 }
 .partners_block .clients ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    row-gap: 39px;
-    margin-top: 64px;
-    margin-left: 4px;
+    row-gap: 37px;
+    margin-top: 63px;
+    margin-left: 8px;
 }
 .partners_block .client_items:nth-child(2) {
     margin-top: 6px;
@@ -388,7 +391,7 @@ main {
 }
 
 .technology_block {
-    margin-top: -7px;
+    margin-top: 84px;
     margin-bottom: 104px;
 }
 .technology_block .technology_info {
@@ -492,4 +495,143 @@ footer .address .phone {
     background-image: none;
     margin-top: 16px;
     margin-left: 24px;
+}
+
+
+
+
+@media screen and (max-width: 1165px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .wrapper {
+        margin: 0 10px;
+    }
+    .menu ul {
+        display: none;
+    }
+    .menu .burger_menu {
+        display: block;
+    }
+
+    .slider_block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "title title"
+        "info info"
+        "slider-nav detail-btn";
+
+        padding-top: 255px;
+        row-gap: 20px;
+    }
+
+    .slider_block h2 {
+        grid-area: title;
+    }
+    .slider_block .slider_info {
+        grid-area: info;
+    }
+    .slider_block .detail_button {
+        grid-area: detail-btn;
+    }
+    .slider_block .slider_nav {
+        grid-area: slider-nav;
+    }
+
+    .who_block .statistic {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 0px;
+    }
+
+    .who_block .statistic_section {
+        display: grid;
+        grid-template-columns: 190px;
+        justify-content: center;
+    }
+    .who_block .value{
+        margin: 0 auto;
+    }
+    .who_block .value_info{
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+
+    .directions_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .direction_element {
+        margin: 0 auto;
+    }
+    
+    .projects_wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .projects_wrapper .project_elem {
+        margin: 0 auto;
+    }
+
+
+    .partners_block {
+        margin: 0;
+        padding: 0;
+    }
+    .partners_block h2 {
+        display: none;
+    }
+    .partners_block .clients ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        background-color: black;
+    }
+    .partners_block .clients .client_items {
+        margin: 0 auto;
+    }
+
+    .technology_list ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer .contacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        font-size: 14px;
+        column-gap: 60px;
+        row-gap: 30px;
+    }
+    .contacts .col {
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+    .slider_block {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "title"
+        "info"
+        "detail-btn"
+        "slider-nav";
+
+        padding-top: 255px;
+        row-gap: 20px;
+    }
+    .slider_block .detail_button {
+        justify-self: end;
+    }
+
+    .technology_list ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
