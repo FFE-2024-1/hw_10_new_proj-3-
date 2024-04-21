@@ -572,6 +572,7 @@ footer .address .phone {
     .directions_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        column-gap: 0px;
     }
     .direction_element {
         margin: 0 auto;
@@ -639,7 +640,10 @@ footer .address .phone {
     .slider_block .detail_button {
         justify-self: end;
     }
-
+    .who_block .statistic {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
     .technology_list ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
