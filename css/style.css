@@ -400,6 +400,10 @@ main {
     margin-left: 52px;
 }
 
+.client_items img {
+    max-width: 100%;
+}
+
 .technology_block {
     margin-top: 84px;
     margin-bottom: 104px;
@@ -647,5 +651,8 @@ footer .address .phone {
     .technology_list ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+    footer .contacts {
+        column-gap:10px;
     }
 }
